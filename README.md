@@ -44,8 +44,6 @@ O notebook detalha os seguintes passos:
 - Desabilitamos as otimizações do tensorflow para permitir que usassemos placas de vídeo para treinar o modelo.
 - Foi implementada uma arquitetura de CNN Sequencial, consistindo em blocos de Conv2D e MaxPooling2D, seguidos por um classificador com camadas Flatten, Dense e Dropout para regularização. A camada de saída utiliza softmax para a classificação multiclasse.
 
-![alt text](model_arch.png)
-
 #### Treinamento: 
 
 - O modelo foi compilado com o otimizador Adam. 
