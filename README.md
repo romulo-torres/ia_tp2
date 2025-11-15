@@ -36,7 +36,7 @@ Tratamento de dados:
 
 - Devido ao dataset ser pequeno com apenas 2.527 imagens e desbalanceado, por exemplo a classe trash tem apenas 137 imagens, técnicas de data augmentation como rotação, zoom e inversão foram aplicadas ao conjunto de treino para evitar overfitting e melhorar a generalização.
 - Foi utilizado o ImageDataGenerator do Keras para dividir o dataset em conjuntos de treino e validação.
-- Definimos o tamanho do ``batch_size`` para 32 e as dimensões dos dados de entrada para 224x224.
+- Para o treinamento, as imagens foram redimensionadas para 224x224 pixels e agrupadas em lotes de 32 (batch_size).
 
 Construção do Modelo: 
 
