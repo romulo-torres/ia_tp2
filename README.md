@@ -28,25 +28,25 @@ O projeto utiliza o dataset [TrashNet](https://github.com/garythung/trashnet), q
 
 O notebook detalha os seguintes passos:
 
-Carregamento: 
+#### Carregamento: 
 
   - As imagens são carregadas.
   - O notebook contém alguns testes de acesso a exemplos de classes.
 
-Tratamento de dados: 
+#### Tratamento de dados: 
 
 - Devido ao dataset ser pequeno com apenas 2.527 imagens e desbalanceado, por exemplo a classe trash tem apenas 137 imagens, técnicas de data augmentation como rotação, zoom e inversão foram aplicadas ao conjunto de treino para evitar overfitting e melhorar a generalização.
 - Foi utilizado o ImageDataGenerator do Keras para dividir o dataset em conjuntos de treino e validação.
 - Para o treinamento, as imagens foram redimensionadas para 224x224 pixels e agrupadas em lotes de 32 (batch_size).
 
-Construção do Modelo: 
+#### Construção do Modelo: 
 
 - Desabilitamos as otimizações do tensorflow para permitir que usassemos placas de vídeo para treinar o modelo.
 - Foi implementada uma arquitetura de CNN Sequencial, consistindo em blocos de Conv2D e MaxPooling2D, seguidos por um classificador com camadas Flatten, Dense e Dropout para regularização. A camada de saída utiliza softmax para a classificação multiclasse.
 
 ![alt text](model_arch.png)
 
-Treinamento: 
+#### Treinamento: 
 
 - O modelo foi compilado com o otimizador Adam. 
 - Para garantir um treinamento robusto e eficiente, utilizamos class_weight para forçar o modelo a aprender com as classes desbalanceadas (como 'trash'). 
