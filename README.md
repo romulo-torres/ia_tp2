@@ -20,7 +20,7 @@ O objetivo do trabalho é analisar o processo e resultados de um modelo de Rede 
  * Plástico (plastic)
  * Vidro (glass)
  * Metal (metal)
- * Lixo Orgânico/Rejeito (trash)
+ * Lixo (trash)
 
 O projeto utiliza o dataset [TrashNet](https://github.com/garythung/trashnet), que consiste em 2.527 imagens divididas nessas seis classes e o notebook [Trash/Garbage Type Detection using CNN](https://www.kaggle.com/code/farnazmirfeizi/trash-garbage-type-detection-using-cnn) como um framework base para treinamento de modelos.
 
@@ -30,7 +30,8 @@ O notebook detalha os seguintes passos:
 
 Carregamento: 
 
-  - As imagens são carregadas e normalizadas. 
+  - As imagens são carregadas.
+  - O notebook contém alguns testes de acesso a exemplos de classes.
 
 Tratamento de dados: 
 
@@ -42,6 +43,8 @@ Construção do Modelo:
 
 - Desabilitamos as otimizações do tensorflow para permitir que usassemos placas de vídeo para treinar o modelo.
 - Foi implementada uma arquitetura de CNN Sequencial, consistindo em blocos de Conv2D e MaxPooling2D, seguidos por um classificador com camadas Flatten, Dense e Dropout para regularização. A camada de saída utiliza softmax para a classificação multiclasse.
+
+![alt text](model_arch.png)
 
 Treinamento: 
 
@@ -61,6 +64,6 @@ Uma análise detalhada dos resultados, incluindo a matriz de confusão e o impac
 ## 4. Como Executar
 
  * Clone este repositório.
- * Tenha um ambiente com TensorFlow e Scikit-learn instalados.
- * Baixe o conjunto de dados e configure o seu diretório.
- * Execute o notebook classificacao_lixo.ipynb.
+ * Tenha um ambiente com as dependÊncias em ``requirements.txt`` instaladas (TensorFlow, Scikit-learn, etc).
+ * Baixe o conjunto de dados [TrashNet](https://github.com/garythung/trashnet) e configure o seu diretório.
+ * Execute o notebook ``classificacao_de_lixo.ipynb``.
