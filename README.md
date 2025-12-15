@@ -11,7 +11,14 @@ Esse trabalho feito pelos alunos:
 - Rômulo Fernandes Torres - 22351220
 - Ronald Vieira Cardoso da Silva - 22352934
 
-## 1. Descrição do Projeto
+## 1. Como Executar
+
+ * Clone este repositório.
+ * Tenha um ambiente com as dependÊncias em ``requirements.txt`` instaladas (TensorFlow, Scikit-learn, etc). Rode a celula para instalar as dependências caso necessário. É a primeira celula de código, o comando está comentado caso já tenha um ambiente configurado.
+ * O código com o ambiente configurado também está disponível no link: https://www.kaggle.com/code/arthurcapucho/classificacao-de-lixo-cnn-ipynb
+ * Para executar através do kaggle, será necessário "copiar e editar" o notebook no site.
+
+## 2. Descrição do Projeto
 
 O objetivo do trabalho é analisar o processo e resultados de um modelo de Rede Neural Convolucional (CNN) capaz de classificar imagens de lixo em seis categorias distintas:
 
@@ -24,7 +31,7 @@ O objetivo do trabalho é analisar o processo e resultados de um modelo de Rede 
 
 O projeto utiliza o dataset [TrashNet](https://github.com/garythung/trashnet), que consiste em 2.527 imagens divididas nessas seis classes e o notebook [Trash/Garbage Type Detection using CNN](https://www.kaggle.com/code/farnazmirfeizi/trash-garbage-type-detection-using-cnn) como um framework base para treinamento de modelos.
 
-## 2. Metodologia
+## 3. Metodologia
 
 O notebook detalha os seguintes passos:
 
@@ -53,15 +60,8 @@ O notebook detalha os seguintes passos:
   - EarlyStopping preveniu o overfitting (sobreajuste) interrompendo o treino quando o val_loss parava de melhorar.
   - ReduceLROnPlateau ajustou a taxa de aprendizado automaticamente para refinar o modelo quando ele chegava em um platô de performance.
 
-## 3. Resultados
+## 4. Resultados
 
 Após o treinamento e ajuste do modelo, a acurácia final obtida no conjunto de validação foi 75.06% com o val_loss de 0.7401.
 
 Uma análise detalhada dos resultados, incluindo a matriz de confusão e o impacto do data augmentation, pode ser encontrada diretamente no notebook.
-
-## 4. Como Executar
-
- * Clone este repositório.
- * Tenha um ambiente com as dependÊncias em ``requirements.txt`` instaladas (TensorFlow, Scikit-learn, etc).
- * Baixe o conjunto de dados [TrashNet](https://github.com/garythung/trashnet) e configure o seu diretório.
- * Execute o notebook ``classificacao_de_lixo.ipynb``.
